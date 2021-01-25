@@ -157,6 +157,7 @@ h2 span {
         "image controls"
         "image controls"
         "name controls";
+    transform: scale(0.6);
 }
 #shelf .instrument {
     grid-template-areas: "controls" "image" "name";
@@ -172,7 +173,6 @@ h2 span {
 #theStage .instrument img {
     max-width: 90%;
     max-height: 90%;
-    transform: scale(0.6);
 }
 .instrument h3 {
     text-align: center;
@@ -314,12 +314,6 @@ footer {
     color: #555;
 }
 
-@media screen and (min-width: 30em) {
-    #theStage .instrument img {
-        transform: scale(0.6);
-    }
-
-}
 
 @media screen and (min-width: 56.25em) {
     .siteNav {
@@ -332,11 +326,6 @@ footer {
     #main {
         font-size: 1em;
         max-width: 99%;
-    }
-}
-@media screen and (min-width: 80em) {
-    #theStage .instrument img {
-        transform: scale(0.6);
     }
 }
 
