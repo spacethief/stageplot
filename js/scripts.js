@@ -44,7 +44,7 @@ $(function(){
             var degrees = 0;
             $('.rotate').on('click touchstart', function () {
                 degrees = degrees+45;
-                $(this).closest('span').find('img').css( "transform", "rotateZ(" + degrees + "deg)" "scale(0.6)";
+                $(this).closest('span').find('img').css( "transform", "rotateZ(" + degrees + "deg) scale(0.6)";
             });
             //Reset transforms
             var zero = 0;
