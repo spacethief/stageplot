@@ -157,7 +157,6 @@ h2 span {
         "image controls"
         "image controls"
         "name controls";
-    transform: scale(0.6);
 }
 #shelf .instrument {
     grid-template-areas: "controls" "image" "name";
@@ -173,6 +172,7 @@ h2 span {
 #theStage .instrument img {
     max-width: 90%;
     max-height: 90%;
+    transform: scale(0.6);
 }
 .instrument h3 {
     text-align: center;
