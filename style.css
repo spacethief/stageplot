@@ -149,6 +149,7 @@ h2 span {
 .instrument {
     position: relative;
     display: grid;
+    justify-content: center;
 }
 #theStage .instrument {
     grid-template-areas:
