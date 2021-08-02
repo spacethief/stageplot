@@ -172,7 +172,6 @@ h2 span {
 #theStage .instrument img {
     max-width: 90%;
     max-height: 90%;
-    transform: scale(0.6);
 }
 .instrument h3 {
     text-align: center;
