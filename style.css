@@ -170,8 +170,8 @@ h2 span {
     margin: 0 auto .8em;
 }
 #theStage .instrument img {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: initial;
+    max-height: initial;
     transform: scale(0.6);
 }
 .instrument h3 {
@@ -185,7 +185,7 @@ h2 span {
     display: none;
 }
 #theStage .instrument h3 {
-    max-width: 99%;
+    max-width: initial;
     font-size: 0.9em;
     display: none;
 }
