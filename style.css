@@ -190,11 +190,6 @@ h2 span {
     display: none;
 }
 
-#theStage .text p,
-#shelf .text input {
-    display: none;
-}
-
 .controlsOnOff,
 .clearStage {
     position: relative;
