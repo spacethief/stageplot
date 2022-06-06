@@ -294,11 +294,17 @@
                         </section>
                     </span>
                     <span class="instrument text">
-                        <p>Custom Text</p>
-                        <h3><script>document.getElementById("customText");</script></h3>
+                        <script>var cusTitle = document.getElementById("customText");</script>
+                        <input id="customText" type="text" value="Custom Text"></input>
+                        <button onclick="myFunction()">Try it</button>
+                        <script>
+                            function myFunction() {
+                              var x = document.getElementById("myText").value;
+                              document.getElementById("demo").innerHTML = x;
+                            }
+                        </script>
                         <section class="controls hide printHide">
                             <aside class="remove">Remove</aside>
-                            <input id="customText" type="text" name="Custom Text"></input>
                         </section>
                     </span>
                 </div>
