@@ -293,21 +293,24 @@
                             <aside class="remove">Remove</aside>
                         </section>
                     </span>
-                    <span class="instrument text">
-                        <script>var cusTitle = document.getElementById("customText");</script>
-                        <input id="customText" type="text" value="Custom Text"></input>
-                        <button onclick="myFunction()">Try it</button>
-                        <script>
-                            function myFunction() {
-                              var x = document.getElementById("myText").value;
-                              document.getElementById("demo").innerHTML = x;
-                            }
-                        </script>
-                        <section class="controls hide printHide">
-                            <aside class="remove">Remove</aside>
-                        </section>
-                    </span>
                 </div>
+            </div>
+<!-- Custom Text Shelf -->
+            <h2 class="printHide shelfToggle">Add Custom Text <span>(show/hide)</span></h2>
+            <div id="shelf" class="printHide show">
+                <span class="text">
+                    <input id="customText" type="text" value="Custom Text"></input>
+                    <button onclick="addText()">Add to Shelf</button>
+                    <script>
+                        function addText() {
+                          var x = document.getElementById("myText").value;
+                          document.getElementById("customText").innerHTML = x;
+                        }
+                    </script>
+                    <section class="controls hide printHide">
+                        <aside class="remove">Remove</aside>
+                    </section>
+                </span>
             </div>
 <!-- Input List Table -->
             <h2 class="inputList">Input List</h2>
