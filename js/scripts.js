@@ -14,50 +14,43 @@ $(function(){
             if($('.' + instrument).length <= limit) {
                 $(this).clone().appendTo('#' + stage).addClass('dragon').css({"left" : posX+"%", "top" : posY+"%"});
             }
-            else if($('.' + text)) {
-                $(this).clone().appendTo('#' + stage).addClass('dragon');
-            }
-            //Show instrument controls
-//            $('#theStage .controlsToggle').on('click', function () {
-//                $(this).closest('span').find('.controls').toggleClass('show hide');
-//            });
+
             //Toggle control handles
             $('.controls').hide();
             $('.controlsShow').click(function () {
-//                $('#theStage .controlsToggle').addClass('show').removeClass('hide');
                 $('#theStage .controls').show().addClass('show').removeClass('hide');
                 $(this).addClass('off').removeClass('on');
                 $('.controlsHide').addClass('on').removeClass('off');
             });
             $('.controlsHide').click(function () {
-//                $('#theStage .controlsToggle').addClass('hide').removeClass('show');
                 $('#theStage .controls').addClass('hide').removeClass('show').hide();
                 $(this).addClass('off').removeClass('on');
                 $('.controlsShow').addClass('on').removeClass('off');
             });
+
             //Instrument is draggable within the boundaries of the stage
             $('.dragon').udraggable({
                 containment: '#theStage'
             });
+
             //Enable remove control
             $('.remove').on('click touchstart', function () {
                 $(this).closest('span').remove();
             });
+
             //Enable rotation control
             var degrees = 0;
             $('.rotate').on('click touchstart', function () {
                 degrees = degrees+45;
                 $(this).closest('span').find('img').css( "transform", "scale(0.6) rotateZ(" + degrees + "deg)");
             });
+
             //Reset transforms
             var zero = 0;
             $('.reset').on('click touchstart', function () {
-//                $(this).closest('span').css( {
-//                    "left" : posX+"px",
-//                    "top" : posY+"px"
-//                });
                 $(this).closest('span').find('img').css( "transform", "");
             });
+
             //Clear the stage
             $('.clearStage').on('click touchstart', function () {
                 $('#stage .instrument').remove();
