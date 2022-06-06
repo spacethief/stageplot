@@ -14,7 +14,7 @@ $(function(){
             if($('.' + instrument).length <= limit) {
                 $(this).clone().appendTo('#' + stage).addClass('dragon').css({"left" : posX+"%", "top" : posY+"%"});
             }
-            if($('.' + text)) {
+            else if($('.' + text)) {
                 $(this).clone().appendTo('#' + stage).addClass('dragon');
             }
             //Show instrument controls
