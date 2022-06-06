@@ -293,10 +293,13 @@
                             <aside class="remove">Remove</aside>
                         </section>
                     </span>
-                    <span class="instrument text">
-                        <input name="Custom Text">
+                    <span id="customText" class="instrument text">
+                        <script>
+                            var x = document.createElement("INPUT");
+                            x.setAttribute("type", "text");
+                        </script>
                         <p>Custom Text</p>
-                        <h3>Custom Text</h3>
+                        <h3>document.getElementById("customText");</h3>
                         <section class="controls hide printHide">
                             <aside class="rotate">Rotate</aside>
                             <aside class="reset">Reset</aside>
