@@ -190,7 +190,8 @@ h2 span {
     display: none;
 }
 
-#theStage .text p {
+#theStage .text p,
+#shelf .text input {
     display: none;
 }
 
