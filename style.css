@@ -190,6 +190,10 @@ h2 span {
     display: none;
 }
 
+#theStage .text button {
+    display: none;
+}
+
 .controlsOnOff,
 .clearStage {
     position: relative;
