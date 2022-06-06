@@ -11,7 +11,7 @@ $(function(){
         var posY = defY;
        $('#' + shelf + ' .' + instrument).click(function () {
             //Clone instrument to stage if within max limit of instrument type
-            if($('.' + instrument).length <= limit) { 
+            if($('.' + instrument).length <= limit) {
                 $(this).clone().appendTo('#' + stage).addClass('dragon').css({"left" : posX+"%", "top" : posY+"%"});
             }
             //Show instrument controls
@@ -50,7 +50,7 @@ $(function(){
             var zero = 0;
             $('.reset').on('click touchstart', function () {
 //                $(this).closest('span').css( {
-//                    "left" : posX+"px", 
+//                    "left" : posX+"px",
 //                    "top" : posY+"px"
 //                });
                 $(this).closest('span').find('img').css( "transform", "");
@@ -61,7 +61,7 @@ $(function(){
             });
         });
     }
-    
+
     //Toggle controls on staged instruments
 //    function controlsToggle() {
 //        $('.controlsShow').click(function () {
@@ -122,6 +122,7 @@ $(function(){
     addInstrument('violin',5 ,90, 70);
     addInstrument('electric',15, 50, 53);
     addInstrument('banjo',5, 83, 70);
+    addInstrument('text',99, 83, 70);
 
 //    controlsToggle();
     shelfToggle();
@@ -129,5 +130,3 @@ $(function(){
     menuToggle();
 
 });
-
-
