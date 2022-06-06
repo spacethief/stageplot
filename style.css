@@ -190,6 +190,10 @@ h2 span {
     display: none;
 }
 
+#theStage .text p {
+    display: none;
+}
+
 .controlsOnOff,
 .clearStage {
     position: relative;
@@ -236,7 +240,7 @@ h2 span {
 .instrument .controlsToggle.show {
     transform: scale(1);
 }
-.controls { 
+.controls {
     z-index: 20;
     grid-area: controls;
     position: absolute;
@@ -322,7 +326,7 @@ footer {
     ul.nav-menu {
         grid-template-columns: repeat(4, minmax(200px,1fr));
     }
-    
+
     #main {
         font-size: 1em;
         max-width: 99%;
@@ -356,4 +360,3 @@ footer {
         border: 2px solid;
     }
 }
-
