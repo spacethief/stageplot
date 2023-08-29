@@ -1,300 +1,359 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <title>Stageplot | Boss Radio ATX</title>
-        <meta name="description" content="Plot your stage layout with this handy tool.">
-        <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
-        <link rel="stylesheet" href="style.css" >
-    </head>
+  <head>
+    <title>Stageplot | Boss Radio ATX</title>
+    <meta
+      name="description"
+      content="Plot your stage layout with this handy tool."
+    />
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-    <body>
-
+  <body>
     <header class="printHide siteNav">
-        <nav id="site-navigation">
-            <div class="mobileNav" style="display:none;">Menu</div>
-            <ul class="nav-menu">
-                <li><a href="http://www.bossradioatx.com">Home</a></li>
-            </ul>
-        </nav>
+      <nav id="site-navigation">
+        <div class="mobileNav" style="display: none">Menu</div>
+        <ul class="nav-menu">
+          <li><a href="http://www.bossradioatx.com">Home</a></li>
+        </ul>
+      </nav>
     </header>
 
-        <div id="main">
-
-            <h1 class="printHide">Stage Plot Designer</h1>
-<!-- Print Button -->
-            <h2 class="printButton printHide"><a onclick="window.print();">Print/PDF</a>
-                <!-- <span>To save PDF, choose 'Save as PDF' from list of printers, devices, or destinations.</span> -->
-            </h2>
-            <h2 class="printPreview">Screenshot Mode<!-- <span>Hide all non-printed elements except this one.</span> --></h2>
-<!-- Band Details -->
-            <section class="bandDetails">
-                <span>
-                    <h3>Band Name</h3>
-                    <input type="text" />
-                </span>
-                <span>
-                    <h3>Venue</h3>
-                    <input type="text" />
-                </span>
-                <span>
-                    <h3>Date / Time</h3>
-                    <input type="text" />
-                </span>
+    <div id="main">
+      <h1 class="printHide">Stage Plot Designer</h1>
+      <!-- Print Button -->
+      <h2 class="printButton printHide">
+        <a onclick="window.print();">Print/PDF</a>
+        <!-- <span>To save PDF, choose 'Save as PDF' from list of printers, devices, or destinations.</span> -->
+      </h2>
+      <h2 class="printPreview">
+        Screenshot Mode<!-- <span>Hide all non-printed elements except this one.</span> -->
+      </h2>
+      <!-- Band Details -->
+      <section class="bandDetails">
+        <span>
+          <h3>Band Name</h3>
+          <input type="text" />
+        </span>
+        <span>
+          <h3>Venue</h3>
+          <input type="text" />
+        </span>
+        <span>
+          <h3>Date / Time</h3>
+          <input type="text" />
+        </span>
+      </section>
+      <!-- The Stage -->
+      <div id="stage">
+        <h2>Stage</h2>
+        <div class="printHide controlsOnOff">
+          Instrument Rotation Controls:
+          <span class="controlsShow off">Show</span>
+          <span class="controlsHide off">Hide</span>
+        </div>
+        <div class="printHide clearStage">Reset Stage</div>
+        <div id="theStage">
+          <!-- Script Happens Here -->
+        </div>
+      </div>
+      <!-- The Instrument Shelf -->
+      <h2 class="printHide shelfToggle">Gear Shelf <span>(show/hide)</span></h2>
+      <div class="printHide gearTip">
+        Click or tap an item to add it to the stage
+      </div>
+      <div id="shelf" class="printHide show">
+        <div>
+          <span class="instrument guitar">
+            <img src="images/guitar.png" alt="Guitar" title="Guitar" />
+            <h3>Guitar</h3>
+            <section class="controls hide printHide">
+              <aside class="rotate">Rotate</aside>
+              <aside class="reset">Reset</aside>
+              <aside class="remove">Remove</aside>
             </section>
-<!-- The Stage -->
-            <div id="stage">
-                <h2>Stage</h2>
-                <div class="printHide controlsOnOff">
-                    Instrument Rotation Controls:
-                    <span class="controlsShow off">Show</span>
-                    <span class="controlsHide off">Hide</span>
-                </div>
-                <div class="printHide clearStage">Reset Stage</div>
-                <div id="theStage">
-                    <!-- Script Happens Here -->
-                </div>
-            </div>
-<!-- The Instrument Shelf -->
-            <h2 class="printHide shelfToggle">Gear Shelf <span>(show/hide)</span></h2>
-            <div class="printHide gearTip">Click or tap an item to add it to the stage</div>
-            <div id="shelf" class="printHide show">
-                <div>
-                    <span class="instrument guitar">
-                        <img src="images/guitar.png" alt="Guitar" title="Guitar" />
-                        <h3>Guitar</h3>
-                        <section class="controls hide printHide">
-                            <aside class="rotate">Rotate</aside>
-                            <aside class="reset">Reset</aside>
-                            <aside class="remove">Remove</aside>
-                        </section>
-                    </span>
-                    <span class="instrument bassElectric">
-                        <img src="images/bassElectric.png" alt="Bass" title="Bass" />
-                        <h3>Bass</h3>
-                        <section class="controls hide printHide">
-                            <aside class="rotate">Rotate</aside>
-                            <aside class="reset">Reset</aside>
-                            <aside class="remove">Remove</aside>
-                        </section>
-                    </span>
-                    <span class="instrument keyboard">
-                        <img src="images/keyboard.png" alt="Keyboard" title="Keyboard" />
-                        <h3>Keyboard</h3>
-                        <section class="controls hide printHide">
-                            <aside class="rotate">Rotate</aside>
-                            <aside class="reset">Reset</aside>
-                            <aside class="remove">Remove</aside>
-                        </section>
-                    </span>
-                    <span class="instrument laptop">
-                        <img src="images/laptop.png" alt="Laptop" title="Laptop" />
-                        <h3>Laptop</h3>
-                        <section class="controls hide printHide">
-                            <aside class="rotate">Rotate</aside>
-                            <aside class="reset">Reset</aside>
-                            <aside class="remove">Remove</aside>
-                        </section>
-                    </span>
-                    <span class="instrument keytar">
-                        <img src="images/keytar.png" alt="Keytar" title="Keytar" />
-                        <h3>Keytar</h3>
-                        <section class="controls hide printHide">
-                            <aside class="rotate">Rotate</aside>
-                            <aside class="reset">Reset</aside>
-                            <aside class="remove">Remove</aside>
-                        </section>
-                    </span>
-                    <span class="instrument guitarAcoustic">
-                        <img src="images/guitarAcoustic.png" alt="Acoustic" title="Acoustic" />
-                        <h3>Acoustic</h3>
-                        <section class="controls hide printHide">
-                            <aside class="rotate">Rotate</aside>
-                            <aside class="reset">Reset</aside>
-                            <aside class="remove">Remove</aside>
-                        </section>
-                    </span>
-                    <span class="instrument bassUpright">
-                        <img src="images/bassUpright.png" alt="Double Bass" title="Double Bass" />
-                        <h3>Double Bass</h3>
-                        <section class="controls hide printHide">
-                            <aside class="rotate">Rotate</aside>
-                            <aside class="reset">Reset</aside>
-                            <aside class="remove">Remove</aside>
-                        </section>
-                    </span>
-                    <span class="instrument standMicStraight">
-                        <img src="images/standMicStraight.png" alt="Mic Stand" title="Mic Stand" />
-                        <h3>Mic Stand</h3>
-                        <section class="controls hide printHide">
-                            <aside class="rotate">Rotate</aside>
-                            <aside class="reset">Reset</aside>
-                            <aside class="remove">Remove</aside>
-                        </section>
-                    </span>
-                    <span class="instrument standMicBoom">
-                        <img src="images/standMicBoom.png" alt="Boom Stand" title="Boom Stand" />
-                        <h3>Boom Stand</h3>
-                        <section class="controls hide printHide">
-                            <aside class="rotate">Rotate</aside>
-                            <aside class="reset">Reset</aside>
-                            <aside class="remove">Remove</aside>
-                        </section>
-                    </span>
-                    <span class="instrument barstool">
-                        <img src="images/barstool.png" alt="Barstool" title="Barstool" />
-                        <h3>Barstool</h3>
-                        <section class="controls hide printHide">
-                            <aside class="rotate">Rotate</aside>
-                            <aside class="reset">Reset</aside>
-                            <aside class="remove">Remove</aside>
-                        </section>
-                    </span>
-                    <span class="instrument drumsFour">
-                        <img src="images/drumsFour.png" alt="4 Piece" title="4 Piece" />
-                        <h3>4 Piece</h3>
-                        <section class="controls hide printHide">
-                            <aside class="rotate">Rotate</aside>
-                            <aside class="reset">Reset</aside>
-                            <aside class="remove">Remove</aside>
-                        </section>
-                    </span>
-                    <span class="instrument drumsSix">
-                        <img src="images/drumsSix.png" alt="6 Piece" title="6 Piece" />
-                        <h3>6 Piece</h3>
-                        <section class="controls hide printHide">
-                            <aside class="rotate">Rotate</aside>
-                            <aside class="reset">Reset</aside>
-                            <aside class="remove">Remove</aside>
-                        </section>
-                    </span>
-                    <span class="instrument monitorTop">
-                        <img src="images/monitorTop.png" alt="Monitor" title="Monitor" />
-                        <h3>Monitor</h3>
-                        <section class="controls hide printHide">
-                            <aside class="rotate">Rotate</aside>
-                            <aside class="reset">Reset</aside>
-                            <aside class="remove">Remove</aside>
-                        </section>
-                    </span>
-                    <span class="instrument monitorWedge">
-                        <img src="images/monitorWedge.png" alt="Monitor" title="Monitor" />
-                        <h3>Monitor</h3>
-                        <section class="controls hide printHide">
-                            <aside class="rotate">Rotate</aside>
-                            <aside class="reset">Reset</aside>
-                            <aside class="remove">Remove</aside>
-                        </section>
-                    </span>
-                    <span class="instrument comboGuitar">
-                        <img src="images/comboGuitar.png" alt="Combo" title="Combo" />
-                        <h3>Combo</h3>
-                        <section class="controls hide printHide">
-                            <aside class="rotate">Rotate</aside>
-                            <aside class="reset">Reset</aside>
-                            <aside class="remove">Remove</aside>
-                        </section>
-                    </span>
-                    <span class="instrument comboBass">
-                        <img src="images/comboBass.png" alt="Bass Combo" title="Bass Combo" />
-                        <h3>Bass Combo</h3>
-                        <section class="controls hide printHide">
-                            <aside class="rotate">Rotate</aside>
-                            <aside class="reset">Reset</aside>
-                            <aside class="remove">Remove</aside>
-                        </section>
-                    </span>
-                    <span class="instrument stackFull">
-                        <img src="images/stackFull.png" alt="Stack" title="Stack" />
-                        <h3>Stack</h3>
-                        <section class="controls hide printHide">
-                            <aside class="rotate">Rotate</aside>
-                            <aside class="reset">Reset</aside>
-                            <aside class="remove">Remove</aside>
-                        </section>
-                    </span>
-                    <span class="instrument stackHalf">
-                        <img src="images/stackHalf.png" alt="Half Stack" title="Half Stack" />
-                        <h3>Half Stack</h3>
-                        <section class="controls hide printHide">
-                            <aside class="rotate">Rotate</aside>
-                            <aside class="reset">Reset</aside>
-                            <aside class="remove">Remove</aside>
-                        </section>
-                    </span>
-                    <span class="instrument cabinetBassSixTen">
-                        <img src="images/cabinetBassSixTen.png" alt="6x10 Bass Cab" title="6x10 Bass Cab" />
-                        <h3>6x10 Bass Cab</h3>
-                        <section class="controls hide printHide">
-                            <aside class="rotate">Rotate</aside>
-                            <aside class="reset">Reset</aside>
-                            <aside class="remove">Remove</aside>
-                        </section>
-                    </span>
-                    <span class="instrument cabinetBassEightTen">
-                        <img src="images/cabinetBassEightTen.png" alt="8x10 Bass Cab" title="8x10 Bass Cab" />
-                        <h3>8x10 Bass Cab</h3>
-                        <section class="controls hide printHide">
-                            <aside class="rotate">Rotate</aside>
-                            <aside class="reset">Reset</aside>
-                            <aside class="remove">Remove</aside>
-                        </section>
-                    </span>
-                    <span class="instrument pianoGrand">
-                        <img src="images/pianoGrand.png" alt="Grand Piano" title="Grand Piano" />
-                        <h3>Grand Piano</h3>
-                        <section class="controls hide printHide">
-                            <aside class="rotate">Rotate</aside>
-                            <aside class="reset">Reset</aside>
-                            <aside class="remove">Remove</aside>
-                        </section>
-                    </span>
-                    <span class="instrument pianoUpright">
-                        <img src="images/pianoUpright.png" alt="Upright Piano" title="Upright Piano" />
-                        <h3>Upright Piano</h3>
-                        <section class="controls hide printHide">
-                            <aside class="rotate">Rotate</aside>
-                            <aside class="reset">Reset</aside>
-                            <aside class="remove">Remove</aside>
-                        </section>
-                    </span>
-                    <span class="instrument mandolin">
-                        <img src="images/mandolin.png" alt="Mandolin" title="Mandolin" />
-                        <h3>Mandolin</h3>
-                        <section class="controls hide printHide">
-                            <aside class="rotate">Rotate</aside>
-                            <aside class="reset">Reset</aside>
-                            <aside class="remove">Remove</aside>
-                        </section>
-                    </span>
-                    <span class="instrument violin">
-                        <img src="images/violin.png" alt="Violin" title="Violin" />
-                        <h3>Violin</h3>
-                        <section class="controls hide printHide">
-                            <aside class="rotate">Rotate</aside>
-                            <aside class="reset">Reset</aside>
-                            <aside class="remove">Remove</aside>
-                        </section>
-                    </span>
-                    <span class="instrument electric">
-                        <img src="images/electric.png" alt="Electricity" title="Electricity" />
-                        <h3>Electricity</h3>
-                        <section class="controls hide printHide">
-                            <aside class="rotate">Rotate</aside>
-                            <aside class="reset">Reset</aside>
-                            <aside class="remove">Remove</aside>
-                        </section>
-                    </span>
-                    <span class="instrument banjo">
-                        <img src="images/banjo.png" alt="Banjo" title="Banjo" />
-                        <h3>Banjo</h3>
-                        <section class="controls hide printHide">
-                            <aside class="rotate">Rotate</aside>
-                            <aside class="reset">Reset</aside>
-                            <aside class="remove">Remove</aside>
-                        </section>
-                    </span>
-                </div>
-                <!-- Custom Text Shelf
+          </span>
+          <span class="instrument bassElectric">
+            <img src="images/bassElectric.png" alt="Bass" title="Bass" />
+            <h3>Bass</h3>
+            <section class="controls hide printHide">
+              <aside class="rotate">Rotate</aside>
+              <aside class="reset">Reset</aside>
+              <aside class="remove">Remove</aside>
+            </section>
+          </span>
+          <span class="instrument keyboard">
+            <img src="images/keyboard.png" alt="Keyboard" title="Keyboard" />
+            <h3>Keyboard</h3>
+            <section class="controls hide printHide">
+              <aside class="rotate">Rotate</aside>
+              <aside class="reset">Reset</aside>
+              <aside class="remove">Remove</aside>
+            </section>
+          </span>
+          <span class="instrument laptop">
+            <img src="images/laptop.png" alt="Laptop" title="Laptop" />
+            <h3>Laptop</h3>
+            <section class="controls hide printHide">
+              <aside class="rotate">Rotate</aside>
+              <aside class="reset">Reset</aside>
+              <aside class="remove">Remove</aside>
+            </section>
+          </span>
+          <span class="instrument keytar">
+            <img src="images/keytar.png" alt="Keytar" title="Keytar" />
+            <h3>Keytar</h3>
+            <section class="controls hide printHide">
+              <aside class="rotate">Rotate</aside>
+              <aside class="reset">Reset</aside>
+              <aside class="remove">Remove</aside>
+            </section>
+          </span>
+          <span class="instrument guitarAcoustic">
+            <img
+              src="images/guitarAcoustic.png"
+              alt="Acoustic"
+              title="Acoustic"
+            />
+            <h3>Acoustic</h3>
+            <section class="controls hide printHide">
+              <aside class="rotate">Rotate</aside>
+              <aside class="reset">Reset</aside>
+              <aside class="remove">Remove</aside>
+            </section>
+          </span>
+          <span class="instrument bassUpright">
+            <img
+              src="images/bassUpright.png"
+              alt="Double Bass"
+              title="Double Bass"
+            />
+            <h3>Double Bass</h3>
+            <section class="controls hide printHide">
+              <aside class="rotate">Rotate</aside>
+              <aside class="reset">Reset</aside>
+              <aside class="remove">Remove</aside>
+            </section>
+          </span>
+          <span class="instrument standMicStraight">
+            <img
+              src="images/standMicStraight.png"
+              alt="Mic Stand"
+              title="Mic Stand"
+            />
+            <h3>Mic Stand</h3>
+            <section class="controls hide printHide">
+              <aside class="rotate">Rotate</aside>
+              <aside class="reset">Reset</aside>
+              <aside class="remove">Remove</aside>
+            </section>
+          </span>
+          <span class="instrument standMicBoom">
+            <img
+              src="images/standMicBoom.png"
+              alt="Boom Stand"
+              title="Boom Stand"
+            />
+            <h3>Boom Stand</h3>
+            <section class="controls hide printHide">
+              <aside class="rotate">Rotate</aside>
+              <aside class="reset">Reset</aside>
+              <aside class="remove">Remove</aside>
+            </section>
+          </span>
+          <span class="instrument barstool">
+            <img src="images/barstool.png" alt="Barstool" title="Barstool" />
+            <h3>Barstool</h3>
+            <section class="controls hide printHide">
+              <aside class="rotate">Rotate</aside>
+              <aside class="reset">Reset</aside>
+              <aside class="remove">Remove</aside>
+            </section>
+          </span>
+          <span class="instrument drumsFour">
+            <img src="images/drumsFour.png" alt="4 Piece" title="4 Piece" />
+            <h3>4 Piece</h3>
+            <section class="controls hide printHide">
+              <aside class="rotate">Rotate</aside>
+              <aside class="reset">Reset</aside>
+              <aside class="remove">Remove</aside>
+            </section>
+          </span>
+          <span class="instrument drumsSix">
+            <img src="images/drumsSix.png" alt="6 Piece" title="6 Piece" />
+            <h3>6 Piece</h3>
+            <section class="controls hide printHide">
+              <aside class="rotate">Rotate</aside>
+              <aside class="reset">Reset</aside>
+              <aside class="remove">Remove</aside>
+            </section>
+          </span>
+          <span class="instrument monitorTop">
+            <img src="images/monitorTop.png" alt="Monitor" title="Monitor" />
+            <h3>Monitor</h3>
+            <section class="controls hide printHide">
+              <aside class="rotate">Rotate</aside>
+              <aside class="reset">Reset</aside>
+              <aside class="remove">Remove</aside>
+            </section>
+          </span>
+          <span class="instrument monitorWedge">
+            <img src="images/monitorWedge.png" alt="Monitor" title="Monitor" />
+            <h3>Monitor</h3>
+            <section class="controls hide printHide">
+              <aside class="rotate">Rotate</aside>
+              <aside class="reset">Reset</aside>
+              <aside class="remove">Remove</aside>
+            </section>
+          </span>
+          <span class="instrument comboGuitar">
+            <img src="images/comboGuitar.png" alt="Combo" title="Combo" />
+            <h3>Combo</h3>
+            <section class="controls hide printHide">
+              <aside class="rotate">Rotate</aside>
+              <aside class="reset">Reset</aside>
+              <aside class="remove">Remove</aside>
+            </section>
+          </span>
+          <span class="instrument comboBass">
+            <img
+              src="images/comboBass.png"
+              alt="Bass Combo"
+              title="Bass Combo"
+            />
+            <h3>Bass Combo</h3>
+            <section class="controls hide printHide">
+              <aside class="rotate">Rotate</aside>
+              <aside class="reset">Reset</aside>
+              <aside class="remove">Remove</aside>
+            </section>
+          </span>
+          <span class="instrument stackFull">
+            <img src="images/stackFull.png" alt="Stack" title="Stack" />
+            <h3>Stack</h3>
+            <section class="controls hide printHide">
+              <aside class="rotate">Rotate</aside>
+              <aside class="reset">Reset</aside>
+              <aside class="remove">Remove</aside>
+            </section>
+          </span>
+          <span class="instrument stackHalf">
+            <img
+              src="images/stackHalf.png"
+              alt="Half Stack"
+              title="Half Stack"
+            />
+            <h3>Half Stack</h3>
+            <section class="controls hide printHide">
+              <aside class="rotate">Rotate</aside>
+              <aside class="reset">Reset</aside>
+              <aside class="remove">Remove</aside>
+            </section>
+          </span>
+          <span class="instrument cabinetBassSixTen">
+            <img
+              src="images/cabinetBassSixTen.png"
+              alt="6x10 Bass Cab"
+              title="6x10 Bass Cab"
+            />
+            <h3>6x10 Bass Cab</h3>
+            <section class="controls hide printHide">
+              <aside class="rotate">Rotate</aside>
+              <aside class="reset">Reset</aside>
+              <aside class="remove">Remove</aside>
+            </section>
+          </span>
+          <span class="instrument cabinetBassEightTen">
+            <img
+              src="images/cabinetBassEightTen.png"
+              alt="8x10 Bass Cab"
+              title="8x10 Bass Cab"
+            />
+            <h3>8x10 Bass Cab</h3>
+            <section class="controls hide printHide">
+              <aside class="rotate">Rotate</aside>
+              <aside class="reset">Reset</aside>
+              <aside class="remove">Remove</aside>
+            </section>
+          </span>
+          <span class="instrument pianoGrand">
+            <img
+              src="images/pianoGrand.png"
+              alt="Grand Piano"
+              title="Grand Piano"
+            />
+            <h3>Grand Piano</h3>
+            <section class="controls hide printHide">
+              <aside class="rotate">Rotate</aside>
+              <aside class="reset">Reset</aside>
+              <aside class="remove">Remove</aside>
+            </section>
+          </span>
+          <span class="instrument pianoUpright">
+            <img
+              src="images/pianoUpright.png"
+              alt="Upright Piano"
+              title="Upright Piano"
+            />
+            <h3>Upright Piano</h3>
+            <section class="controls hide printHide">
+              <aside class="rotate">Rotate</aside>
+              <aside class="reset">Reset</aside>
+              <aside class="remove">Remove</aside>
+            </section>
+          </span>
+          <span class="instrument mandolin">
+            <img src="images/mandolin.png" alt="Mandolin" title="Mandolin" />
+            <h3>Mandolin</h3>
+            <section class="controls hide printHide">
+              <aside class="rotate">Rotate</aside>
+              <aside class="reset">Reset</aside>
+              <aside class="remove">Remove</aside>
+            </section>
+          </span>
+          <span class="instrument violin">
+            <img src="images/violin.png" alt="Violin" title="Violin" />
+            <h3>Violin</h3>
+            <section class="controls hide printHide">
+              <aside class="rotate">Rotate</aside>
+              <aside class="reset">Reset</aside>
+              <aside class="remove">Remove</aside>
+            </section>
+          </span>
+          <span class="instrument electric">
+            <img
+              src="images/electric.png"
+              alt="Electricity"
+              title="Electricity"
+            />
+            <h3>Electricity</h3>
+            <section class="controls hide printHide">
+              <aside class="rotate">Rotate</aside>
+              <aside class="reset">Reset</aside>
+              <aside class="remove">Remove</aside>
+            </section>
+          </span>
+          <span class="instrument banjo">
+            <img src="images/banjo.png" alt="Banjo" title="Banjo" />
+            <h3>Banjo</h3>
+            <section class="controls hide printHide">
+              <aside class="rotate">Rotate</aside>
+              <aside class="reset">Reset</aside>
+              <aside class="remove">Remove</aside>
+            </section>
+          </span>
+          <span class="instrument gong">
+            <img src="images/gong.png" alt="Gong" title="Gong" />
+            <h3>Gong</h3>
+            <section class="controls hide printHide">
+              <aside class="rotate">Rotate</aside>
+              <aside class="reset">Reset</aside>
+              <aside class="remove">Remove</aside>
+            </section>
+          </span>
+        </div>
+        <!-- Custom Text Shelf
                 <div>
                     <span class="text instrument">
                         <input id="customText" type="text" value="Custom Text"></input>
@@ -311,109 +370,115 @@
                     </span>
                 </div>
                  -->
-            </div>
-<!-- Input List Table -->
-            <h2 class="inputList">Input List</h2>
-            <div id="inputs" class="show">
-                <table><tbody>
-                    <tr>
-                        <td class="num">1</td>
-                        <td class="inputText"><input type="text" name="input1" /></td>
-                        <td class="num">9</td>
-                        <td class="inputText"><input type="text" name="input9" /></td>
-                        <td class="num">17</td>
-                        <td class="inputText"><input type="text" name="input17" /></td>
-                        <td class="num">25</td>
-                        <td class="inputText"><input type="text" name="input25" /></td>
-                    </tr>
-                    <tr>
-                        <td class="num">2</td>
-                        <td class="inputText"><input type="text" name="input2" /></td>
-                        <td class="num">10</td>
-                        <td class="inputText"><input type="text" name="input10" /></td>
-                        <td class="num">18</td>
-                        <td class="inputText"><input type="text" name="input18" /></td>
-                        <td class="num">26</td>
-                        <td class="inputText"><input type="text" name="input26" /></td>
-                    </tr>
-                    <tr>
-                        <td class="num">3</td>
-                        <td class="inputText"><input type="text" name="input3" /></td>
-                        <td class="num">11</td>
-                        <td class="inputText"><input type="text" name="input11" /></td>
-                        <td class="num">19</td>
-                        <td class="inputText"><input type="text" name="input19" /></td>
-                        <td class="num27"></td>
-                        <td class="inputText"><input type="text" name="input27" /></td>
-                    </tr>
-                    <tr>
-                        <td class="num">4</td>
-                        <td class="inputText"><input type="text" name="input4" /></td>
-                        <td class="num">12</td>
-                        <td class="inputText"><input type="text" name="input12" /></td>
-                        <td class="num">20</td>
-                        <td class="inputText"><input type="text" name="input20" /></td>
-                        <td class="num">28</td>
-                        <td class="inputText"><input type="text" name="input28" /></td>
-                    </tr>
-                    <tr>
-                        <td class="num">5</td>
-                        <td class="inputText"><input type="text" name="input5" /></td>
-                        <td class="num">13</td>
-                        <td class="inputText"><input type="text" name="input13" /></td>
-                        <td class="num">21</td>
-                        <td class="inputText"><input type="text" name="input21" /></td>
-                        <td class="num">29</td>
-                        <td class="inputText"><input type="text" name="input29" /></td>
-                    </tr>
-                    <tr>
-                        <td class="num">6</td>
-                        <td class="inputText"><input type="text" name="input6" /></td>
-                        <td class="num">14</td>
-                        <td class="inputText"><input type="text" name="input14" /></td>
-                        <td class="num">22</td>
-                        <td class="inputText"><input type="text" name="input22" /></td>
-                        <td class="num">30</td>
-                        <td class="inputText"><input type="text" name="input30" /></td>
-                    </tr>
-                    <tr>
-                        <td class="num">7</td>
-                        <td class="inputText"><input type="text" name="input7" /></td>
-                        <td class="num">15</td>
-                        <td class="inputText"><input type="text" name="input15" /></td>
-                        <td class="num">23</td>
-                        <td class="inputText"><input type="text" name="input23" /></td>
-                        <td class="num">31</td>
-                        <td class="inputText"><input type="text" name="input31" /></td>
-                    </tr>
-                    <tr>
-                        <td class="num">8</td>
-                        <td class="inputText"><input type="text" name="input8" /></td>
-                        <td class="num">16</td>
-                        <td class="inputText"><input type="text" name="input16" /></td>
-                        <td class="num">24</td>
-                        <td class="inputText"><input type="text" name="input24" /></td>
-                        <td class="num">32</td>
-                        <td class="inputText"><input type="text" name="input32" /></td>
-                    </tr>
+      </div>
+      <!-- Input List Table -->
+      <h2 class="inputList">Input List</h2>
+      <div id="inputs" class="show">
+        <table>
+          <tbody>
+            <tr>
+              <td class="num">1</td>
+              <td class="inputText"><input type="text" name="input1" /></td>
+              <td class="num">9</td>
+              <td class="inputText"><input type="text" name="input9" /></td>
+              <td class="num">17</td>
+              <td class="inputText"><input type="text" name="input17" /></td>
+              <td class="num">25</td>
+              <td class="inputText"><input type="text" name="input25" /></td>
+            </tr>
+            <tr>
+              <td class="num">2</td>
+              <td class="inputText"><input type="text" name="input2" /></td>
+              <td class="num">10</td>
+              <td class="inputText"><input type="text" name="input10" /></td>
+              <td class="num">18</td>
+              <td class="inputText"><input type="text" name="input18" /></td>
+              <td class="num">26</td>
+              <td class="inputText"><input type="text" name="input26" /></td>
+            </tr>
+            <tr>
+              <td class="num">3</td>
+              <td class="inputText"><input type="text" name="input3" /></td>
+              <td class="num">11</td>
+              <td class="inputText"><input type="text" name="input11" /></td>
+              <td class="num">19</td>
+              <td class="inputText"><input type="text" name="input19" /></td>
+              <td class="num27"></td>
+              <td class="inputText"><input type="text" name="input27" /></td>
+            </tr>
+            <tr>
+              <td class="num">4</td>
+              <td class="inputText"><input type="text" name="input4" /></td>
+              <td class="num">12</td>
+              <td class="inputText"><input type="text" name="input12" /></td>
+              <td class="num">20</td>
+              <td class="inputText"><input type="text" name="input20" /></td>
+              <td class="num">28</td>
+              <td class="inputText"><input type="text" name="input28" /></td>
+            </tr>
+            <tr>
+              <td class="num">5</td>
+              <td class="inputText"><input type="text" name="input5" /></td>
+              <td class="num">13</td>
+              <td class="inputText"><input type="text" name="input13" /></td>
+              <td class="num">21</td>
+              <td class="inputText"><input type="text" name="input21" /></td>
+              <td class="num">29</td>
+              <td class="inputText"><input type="text" name="input29" /></td>
+            </tr>
+            <tr>
+              <td class="num">6</td>
+              <td class="inputText"><input type="text" name="input6" /></td>
+              <td class="num">14</td>
+              <td class="inputText"><input type="text" name="input14" /></td>
+              <td class="num">22</td>
+              <td class="inputText"><input type="text" name="input22" /></td>
+              <td class="num">30</td>
+              <td class="inputText"><input type="text" name="input30" /></td>
+            </tr>
+            <tr>
+              <td class="num">7</td>
+              <td class="inputText"><input type="text" name="input7" /></td>
+              <td class="num">15</td>
+              <td class="inputText"><input type="text" name="input15" /></td>
+              <td class="num">23</td>
+              <td class="inputText"><input type="text" name="input23" /></td>
+              <td class="num">31</td>
+              <td class="inputText"><input type="text" name="input31" /></td>
+            </tr>
+            <tr>
+              <td class="num">8</td>
+              <td class="inputText"><input type="text" name="input8" /></td>
+              <td class="num">16</td>
+              <td class="inputText"><input type="text" name="input16" /></td>
+              <td class="num">24</td>
+              <td class="inputText"><input type="text" name="input24" /></td>
+              <td class="num">32</td>
+              <td class="inputText"><input type="text" name="input32" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Notes -->
+      <h2 class="notesTitle">Notes</h2>
+      <div id="notes">
+        <textarea></textarea>
+      </div>
+      <!-- Print Button -->
+      <h2 class="printButton printHide">
+        <a onclick="window.print();">Print/PDF</a>
+      </h2>
+    </div>
 
-                </tbody></table>
-            </div>
-<!-- Notes -->
-            <h2 class="notesTitle">Notes</h2>
-            <div id="notes">
-                <textarea></textarea>
-            </div>
-<!-- Print Button -->
-            <h2 class="printButton printHide"><a onclick="window.print();">Print/PDF</a></h2>
-
-        </div>
-
-        <footer>Stage Plot Designer &copy; 2013, 2019 Boss Tweed Backline</footer>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.event.ue.js"></script>
-        <script src="js/jquery-udraggable.js"></script>
-        <script src="js/scripts.js"></script>
-    </body>
+    <footer>Stage Plot Designer &copy; 2023 Boss Radio Music Services</footer>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.event.ue.js"></script>
+    <script src="js/jquery-udraggable.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
