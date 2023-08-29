@@ -4,10 +4,6 @@ $(function () {
 
   //Add instruments to stage from shelf and make them draggable
   function addInstrument(instrument, limit, posX, posY) {
-    // var limit = max;
-    // var instrument = type;
-    // var posX = defX;
-    // var posY = defY;
     $('#' + shelf + ' .' + instrument).click(function () {
       //Clone instrument to stage if within max limit of instrument type
       if ($('.' + instrument).length <= limit) {
