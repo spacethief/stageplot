@@ -327,6 +327,29 @@ h2 span {
   font-size: 1.2em;
 }
 
+#donate {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1.2em;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 30px auto;
+}
+
+#donate a {
+  display: block;
+  max-width: 70px;
+  margin: 0 auto;
+  font-size: 1.1em;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 7px 8px;
+  border: 1px solid;
+  border-radius: 5%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
 footer {
   width: 100%;
   text-align: center;
