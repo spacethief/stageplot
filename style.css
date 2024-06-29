@@ -189,6 +189,7 @@ h2 span {
   max-width: initial;
   max-height: initial;
   transform: scale(0.6);
+  margin: 0;
 }
 .instrument h3 {
   text-align: center;
@@ -208,6 +209,21 @@ h2 span {
 
 #theStage .text button {
   display: none;
+}
+
+.stageDir {
+  text-transform: uppercase;
+  color: #d1d1d1;
+  text-align: center;
+  position: absolute;
+  width: 675px;
+  margin: 0;
+}
+.stageDir:first-of-type {
+  top: 3px;
+}
+.stageDir:last-of-type {
+  bottom: 3px;
 }
 
 .controlsOnOff,
