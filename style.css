@@ -33,6 +33,7 @@ ul.nav-menu {
   grid-gap: 2px;
   list-style-type: none;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .nav-menu > li {
@@ -327,7 +328,7 @@ h2 span {
   font-size: 1.2em;
 }
 
-#donate {
+/* #donate {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 1.2em;
@@ -337,7 +338,7 @@ h2 span {
 
 #donate a {
   display: block;
-  max-width: 70px;
+  max-width: 130px;
   margin: 0 auto;
   font-size: 1.1em;
   text-decoration: none;
@@ -349,7 +350,7 @@ h2 span {
   border-radius: 5%;
   background: rgba(255, 255, 255, 0.1);
 }
-
+ */
 footer {
   width: 100%;
   text-align: center;
@@ -361,7 +362,7 @@ footer {
     width: 813px;
   }
   ul.nav-menu {
-    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
   }
 
   #main {
